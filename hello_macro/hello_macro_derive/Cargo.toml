@@ -1,0 +1,17 @@
+[package]
+name = "hello_macro_derive"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# proc-macro crate type is required for procedural macros.
+# it comes with with rustc, so we don't need to add it to dependencies.
+proc-macro = true
+
+[dependencies]
+# syn crate parses Rust code from a string into a data structure that we can easily manipulate.
+syn = "1.0"
+# quote crate generates Rust code from a data structure (the one syn makes).
+quote = "1.0"
